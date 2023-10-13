@@ -11,7 +11,9 @@
 
 <body>
 
-    <form action="<?php $_SERVER["PHP_SELF"] ?>" method="get"></form>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="get">
+        <input type="number" name="num01" placeholder="Number one">
+    </form>
 
 </body>
 
