@@ -17,46 +17,101 @@ declare(strict_types=1);
 <body>
 
     <?php
+    // $test = "danel";
 
-    // function sayHello($name)
+    // function myFunction($test)
     // {
-    //     return "hello " . $name . "!";
+    //     //def local var
+    //     $localVar = "hello world";
+    //     //use local var
+    //     return $test; //output hello world
     // }
-    // $test = sayHello("danny");
-    // echo $test;
+    // echo myFunction($test);
 
-    // function sayHello($name = "basse")
+    // $test = "danel";
+
+    // function myFunction($test)
     // {
-    //     return "hello " . $name . "!";
+    //     global $test;
+    //     //def local var
+    //     $localVar = "hello world";
+    //     //use local var
+    //     return $test; //output hello world
     // }
-    // $test = sayHello();
-    // echo $test;
+    // echo myFunction($test);
 
-    // function sayHello(string $name)
+    // $test = "danel";
+
+    // function myFunction()
     // {
-    //     return "hello " . $name . "!";
+    //     global $test;
+    //     //def local var
+    //     $localVar = "hello world";
+    //     //use local var
+    //     return $GLOBALS["test"]; //output hello world
     // }
-    // $test = sayHello("poll");
-    // echo $test;
+    // echo myFunction();
+    // define("PI", 3.14);
+    // echo PI;
 
-    // function calculator(int $num01, int $num02)
-    // {
-    //     $result = $num01 + $num02;
-    //     return $result;
+    //** ********************************   loops *********************************/
+
+    //for loop
+
+    // for ($i = 0; $i <= 10; $i++) {
+    //     echo "This is iteration number " . $i . "<br>";
     // }
-    // $test = calculator(2, 5);
-    // echo $test;
 
-    $test = "Daniel";
+    // $test = 5;
+    // for ($i = 0; $i <= $test; $i++) {
+    //     echo "This is iteration number " . $i . "<br>";
+    // }
 
-    function calculator(int $num01, int $num02)
-    {
-        global $test;
-        $result = $num01 + $num02;
-        return $test;
+    // *********************** while ************************************
+
+    // $boolean = true;
+    // while ($boolean) {
+    //     echo $boolean;
+    //     $boolean = false;
+    // }
+
+    // $test = 5;
+    // $boolean = true;
+    // while ($test < 10) {
+    //     echo $test;
+    //     $test++;
+    // }
+
+    // ********************************* do while *****************************
+
+    // $test = 10;
+    // do {
+    //     echo $test;
+    //     $test++;
+    // } while ($test < 10);
+
+    // ****************** for each ***********************************
+
+    // $fruits = array("apple", "banana", "orange");
+
+    // foreach ($fruits as $fruit) {
+    //     echo "this is: " . $fruit . "<br>";
+    // }
+
+    // displays only colors == keys *****************************
+
+    // $fruits = array("apple" => "RED", "banana" => "YELLOW", "orange" => "ORNGE");
+
+    // foreach ($fruits as $fruit) {
+    //     echo "this is: " . $fruit . "<br>";
+    // }
+
+    // displays both: values and keys
+    $fruits = array("apple" => "RED", "banana" => "YELLOW", "orange" => "ORNGE");
+
+    foreach ($fruits as $fruit => $color) {
+        echo "this is: " . $fruit . ", that hac color of " . $color . "<br>";
     }
-    $test = calculator(2, 5);
-    echo $test;
     ?>
 
 </body>
