@@ -11,7 +11,7 @@
 
 <body>
 
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="get">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <input type="number" name="num01" placeholder="Number one">
         <select name="operator">
             <option value="add">+</option>
@@ -22,6 +22,15 @@
         <input type="number" name="num02" placeholder="Number two">
         <button>Calculate</button>
     </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        //sanitize numbers to avoid unwanted injections
+        $num01 = filter_input(INPUT_POST, "num01", FILTER_SANITIZE_NUMBER_FLOAT);
+        $num02 = filter_input(INPUT_POST, "num02", FILTER_SANITIZE_NUMBER_FLOAT);
+        $operator = htmlspecialchars($_POST["operator"]);
+    }
+    ?>
 
 </body>
 
