@@ -1,3 +1,8 @@
+<?php
+
+declare(strict_types=1);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,56 +16,47 @@
 
 <body>
 
-
-
     <?php
-    $string = "Hello World";
-    // echo strlen($string);
-    // echo "<br>";
-    // echo strpos($string, "o");
-    // echo "<br>";
-    // echo str_replace("World", "universe", $string);
-    // echo "<br>";
-    // echo strtolower($string);
-    // echo "<br>";
-    // echo strtoupper($string);
-    // echo "<br>";
-    // echo substr($string, 2, -2);
-    // echo "<br>";
-    // print_r(explode(' ', $string));
-    // echo "<br>";
 
-    $number = -5.5;
-    // echo abs($number); //absolute num
-    // echo "<br>";
-    // echo round($number); //round num
-    // echo "<br>";
-    // echo pow(2, 6); //power
-    // echo "<br>";
-    // echo rand(1, 100);  // random val
+    // function sayHello($name)
+    // {
+    //     return "hello " . $name . "!";
+    // }
+    // $test = sayHello("danny");
+    // echo $test;
 
-    // $array = ["apple", "banana", "orange", "citron", "plum"];
-    // $array2 = ["coconut"];
+    // function sayHello($name = "basse")
+    // {
+    //     return "hello " . $name . "!";
+    // }
+    // $test = sayHello();
+    // echo $test;
 
-    // echo count($array);
-    // echo "<br>";
-    // echo is_array($array);
-    // echo "<br>";
-    // array_push($array, "kiwi");
-    // print_r($array);
-    // echo "<br>";
+    // function sayHello(string $name)
+    // {
+    //     return "hello " . $name . "!";
+    // }
+    // $test = sayHello("poll");
+    // echo $test;
 
-    // echo array_pop($array);
-    // echo "<br>";
-    // print_r(array_reverse($array));
-    // echo "<br>";
-    // print_r(array_merge($array, $array2));
+    // function calculator(int $num01, int $num02)
+    // {
+    //     $result = $num01 + $num02;
+    //     return $result;
+    // }
+    // $test = calculator(2, 5);
+    // echo $test;
 
-    echo date("Y-m-d H:i:s");
-    echo "<br>";
+    $test = "Daniel";
 
-    echo time();
-
+    function calculator(int $num01, int $num02)
+    {
+        global $test;
+        $result = $num01 + $num02;
+        return $test;
+    }
+    $test = calculator(2, 5);
+    echo $test;
     ?>
 
 </body>
