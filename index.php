@@ -11,59 +11,56 @@
 
 <body>
 
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <input type="number" name="num01" placeholder="Number one" required>
-        <select name="operator">
-            <option value="add">+</option>
-            <option value="subtract">-</option>
-            <option value="multiply">*</option>
-            <option value="divide">/</option>
-        </select>
-        <input type="number" name="num02" placeholder="Number two" required>
-        <button>Calculate</button>
-    </form>
+
 
     <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // grab data from inputs. sanitize numbers to avoid unwanted injections
+    $string = "Hello World";
+    // echo strlen($string);
+    // echo "<br>";
+    // echo strpos($string, "o");
+    // echo "<br>";
+    // echo str_replace("World", "universe", $string);
+    // echo "<br>";
+    // echo strtolower($string);
+    // echo "<br>";
+    // echo strtoupper($string);
+    // echo "<br>";
+    // echo substr($string, 2, -2);
+    // echo "<br>";
+    // print_r(explode(' ', $string));
+    // echo "<br>";
 
-        $num01 = filter_input(INPUT_POST, "num01", FILTER_SANITIZE_NUMBER_FLOAT);
-        $num02 = filter_input(INPUT_POST, "num02", FILTER_SANITIZE_NUMBER_FLOAT);
-        $operator = htmlspecialchars($_POST["operator"]);
+    $number = -5.5;
+    // echo abs($number); //absolute num
+    // echo "<br>";
+    // echo round($number); //round num
+    // echo "<br>";
+    // echo pow(2, 6); //power
+    // echo "<br>";
+    // echo rand(1, 100);  // random val
 
-        //Error handlers
-        $errors = false;
+    // $array = ["apple", "banana", "orange", "citron", "plum"];
+    // $array2 = ["coconut"];
 
-        if (empty($num01) || empty($num02) || empty($operator)) {
-            echo "<p class='calc-error'>Fill inn all fields</p>";
-            $errors = true;
-        }
-        if (!is_numeric($num01) || !is_numeric($num02)) {
-            echo "<p class='calc-error'>Only numbers allowed</p>";
-            $errors = true;
-        }
-        //calculate if no errors
-        if (!$errors) {
-            $value = 0;
-            switch ($operator) {
-                case "add":
-                    $value = $num01 + $num02;
-                    break;
-                case "subtract":
-                    $value = $num01 - $num02;
-                    break;
-                case "multiply":
-                    $value = $num01 * $num02;
-                    break;
-                case "divide":
-                    $value = $num01 / $num02;
-                    break;
-                default:
-                    echo "<p class='calc-error'>Something went wrong</p>";
-            }
-            echo "<p class='calc-result'>RESULT = " . $value . "</p>";
-        }
-    }
+    // echo count($array);
+    // echo "<br>";
+    // echo is_array($array);
+    // echo "<br>";
+    // array_push($array, "kiwi");
+    // print_r($array);
+    // echo "<br>";
+
+    // echo array_pop($array);
+    // echo "<br>";
+    // print_r(array_reverse($array));
+    // echo "<br>";
+    // print_r(array_merge($array, $array2));
+
+    echo date("Y-m-d H:i:s");
+    echo "<br>";
+
+    echo time();
+
     ?>
 
 </body>
