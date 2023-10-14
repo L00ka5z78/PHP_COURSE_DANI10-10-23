@@ -42,6 +42,14 @@ declare(strict_types=1);
 
         <button type="submit">Delete</button>
     </form>
+
+    <form class="searchform" action="search.php" method="post">
+        <label for="search">Search for user:</label>
+        <input for="search" type="text" name="usersearch" placeholder="search..." />
+
+        <button type="submit">Search</button>
+    </form>
+
 </body>
 
 </html>
