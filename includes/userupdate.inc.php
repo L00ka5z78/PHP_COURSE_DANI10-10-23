@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         //second way
 
-        $query = "INSERT INTO users (username, pwd, email) VALUES (:username, :pwd, :email);";
+        $query = "UPDATE users SET username = :username, pwd = :pwd, email = :email WHERE id = 3; ";
 
         $stmt = $pdo->prepare($query);
 
