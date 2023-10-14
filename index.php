@@ -1,10 +1,4 @@
 <?php
-// session_start();
-// $_SESSION["username"] = "Krossing";
-// session_unset(); //unset all session data
-// unset($_SESSION["username"]); //unset one session data
-// session_destroy();
-//unsets session ID on the server, not session id cookie in the browser
 
 require_once 'config.php';
 ?>
@@ -22,10 +16,15 @@ require_once 'config.php';
 </head>
 
 <body>
+    <h2>Signup</h2>
+    <form action="includes/formhandler.inc.php" method="post">
+        <input type="text" name="username" placeholder="username...">
+        <input type="password" name="pwd" placeholder="password...">
+        <input type="email" name="email" placeholder="email...">
 
-    <?php
-    echo $_SESSION["username"];
-    ?>
+        <button type="submit">Signup</button>
+    </form>
+
 </body>
 
 </html>
