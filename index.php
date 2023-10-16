@@ -1,6 +1,6 @@
 <?php
-
-require_once 'config.php';
+require_once 'includes/config_session.inc.php';
+require_once 'includes/signup_mvc/signup_view.inc.php';
 ?>
 
 
@@ -32,6 +32,10 @@ require_once 'config.php';
 
         <button type="submit">Signup</button>
     </form>
+
+    <?php
+    check_signup_errors();
+    ?>
 
 </body>
 
