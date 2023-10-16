@@ -16,8 +16,16 @@ require_once 'config.php';
 </head>
 
 <body>
+    <h2>Login</h2>
+    <form action="includes/login.inc.php" method="post">
+        <input type="text" name="username" placeholder="username...">
+        <input type="password" name="pwd" placeholder="password...">
+
+        <button type="submit">Login</button>
+    </form>
+
     <h2>Signup</h2>
-    <form action="includes/formhandler.inc.php" method="post">
+    <form action="includes/signup.inc.php" method="post">
         <input type="text" name="username" placeholder="username...">
         <input type="password" name="pwd" placeholder="password...">
         <input type="email" name="email" placeholder="email...">
