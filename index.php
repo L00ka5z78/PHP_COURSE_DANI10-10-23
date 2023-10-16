@@ -26,9 +26,12 @@ require_once 'includes/signup_mvc/signup_view.inc.php';
 
     <h2>Signup</h2>
     <form action="includes/signup.inc.php" method="post">
-        <input type="text" name="username" placeholder="username...">
+        <!-- <input type="text" name="username" placeholder="username...">
         <input type="password" name="pwd" placeholder="password...">
-        <input type="email" name="email" placeholder="email...">
+        <input type="email" name="email" placeholder="email..."> -->
+        <?php
+        signup_inputs();
+        ?>
 
         <button type="submit">Signup</button>
     </form>

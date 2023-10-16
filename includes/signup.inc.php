@@ -33,6 +33,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if ($errors) {
             $_SESSION["errors_signup"] = $errors;
+
+            // to still have prefilled form when fail input is given. form is not goint to be blank again
+            $signupData = [
+                "username" => $username,
+                "email" => $emial,
+            ];
+            $_SESSION["signup_data"] = $signupData;
+
+
+
             header("Location: ../index.php");
             die();
         }
