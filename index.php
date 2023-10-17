@@ -11,6 +11,14 @@
 
 <body>
 
+    <h2>Signup</h2>
+    <form action="includes/signup.inc.php" method="post">
+        <input type="text" name="username" placeholder="username...">
+        <input type="password" name="pwd" placeholder="password...">
+
+        <button type="submit">Signup</button>
+    </form>
+
     <?php
     require_once 'Classess/Car.php';
 
