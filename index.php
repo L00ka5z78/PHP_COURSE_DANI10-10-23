@@ -1,10 +1,3 @@
-<?php
-require_once 'includes/config_session.inc.php';
-require_once 'includes/signup_mvc/signup_view.inc.php';
-require_once 'includes/login_mvc/login_view.inc.php';
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +15,8 @@ require_once 'includes/login_mvc/login_view.inc.php';
     require_once 'Classess/Car.php';
 
     $car01 = new Car("mitsubishi", "red");
-
+    echo $car01->setBrand("toyota");
+    echo $car01->getBrand();
     ?>
 
 
