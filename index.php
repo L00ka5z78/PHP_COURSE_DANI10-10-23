@@ -15,8 +15,12 @@
     require_once 'Classess/Car.php';
 
     $car01 = new Car("mitsubishi", "red");
-    echo $car01->setBrand("toyota");
-    echo $car01->getBrand();
+    // echo $car01->setBrand("toyota");
+    // echo $car01->getBrand();
+
+    $car01->setColor("pinky");
+    echo $car01->getColor();
+
     ?>
 
 

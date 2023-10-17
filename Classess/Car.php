@@ -32,7 +32,16 @@ class Car
     }
     public function setColor($color)  //set color to new value
     {
-        $this->color = $color;
+        $allowedColors = [
+            "red",
+            "blue",
+            "yellow",
+            "pinky"
+        ];
+
+        if (in_array($color, $allowedColors)) {
+            $this->color = $color;
+        }
     }
 
     // methods to get properities from insie the class 
