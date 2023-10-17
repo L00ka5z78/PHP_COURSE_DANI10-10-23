@@ -19,15 +19,9 @@ require_once 'includes/login_mvc/login_view.inc.php';
 <body>
 
     <?php
-    $brand = "volvo";
-    $color = "green";
+    require_once 'Classess/Car.php';
 
-    function getCarInfo($brand, $color)
-    {
-        return "BRand: " . $brand . ", Color: " . $color;
-    }
-
-    echo getCarInfo($brand, $color);
+    $car01 = new Car("mitsubishi", "red");
 
     ?>
 

@@ -5,7 +5,8 @@ class Car
     //properities / fields
     private $brand; // === $this->brand
     private $color; // === $this->color
-    private $vehicleType = 'car';
+    // private $vehicleType = 'car';
+    public $vehicleType = 'car';
 
     // constructor
     public function __construct($brand, $color = "none") // color none is default if you have no second param
@@ -21,4 +22,7 @@ class Car
     }
 }
 
-$car01 = new Car("volvo", "green");
+// $car01 = new Car("volvo", "green");
+// echo $car01->getCarInfo();
+// echo "<br>";
+// echo $car01->vehicleType;    // shows properity from a class , but must be public as in line 9
