@@ -9,4 +9,6 @@ if ($_SERVER["REQUEST_METHOD"] === "post") {
     // parent class goes first then child (signup) in this case
     require_once "../Classess/Dbh.php";
     require_once "../Classess/Signup.php";
+
+    $signup = new Signup($username, $pwd);
 }
